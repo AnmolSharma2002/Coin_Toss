@@ -3,25 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coin Toss Simulator</title>
+  <title>Coin Toss Game</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>🎲 Coin Toss Simulator 🎲</h1>
-    <p>Click the button below to toss the coin and see whether it's Heads or Tails!</p>
-
-    <button id="toss-button">Toss the Coin</button>
-
-    <div id="result">
-      <img id="coin-image" src="" alt="Coin Side" style="display: none;">
-      <p id="result-text"></p>
+    <h1>Coin Toss Simulator</h1>
+    
+    <!-- Betting Section -->
+    <div class="betting-section">
+      <h2>Place Your Bet:</h2>
+      <div>
+        <input type="radio" id="heads" name="bet" value="heads">
+        <label for="heads">Heads</label>
+        
+        <input type="radio" id="tails" name="bet" value="tails">
+        <label for="tails">Tails</label>
+      </div>
     </div>
 
+    <!-- Toss Button -->
+    <button id="toss-button">Toss the Coin</button>
+    
+    <!-- Result Display -->
+    <div id="result">
+      <p id="result-text"></p>
+      <div id="bet-result">
+        <p id="bet-status"></p>
+      </div>
+    </div>
+
+    <!-- Cylinder Chart -->
     <div class="cylinder-chart">
       <div class="cylinder">
-        <div class="fill heads-fill" style="height: 0%;"></div>
-        <div class="fill tails-fill" style="height: 0%;"></div>
+        <div class="fill tails-fill" id="fill"></div>
       </div>
       <div class="chart-info">
         <p>Total Tosses: <span id="total-tosses">0</span></p>
@@ -29,20 +44,7 @@
         <p>Tails: <span id="tails-count">0</span></p>
       </div>
     </div>
-
-    <div class="instructions">
-      <h2>How to Play</h2>
-      <ul>
-        <li>Click the "Toss the Coin" button.</li>
-        <li>Wait for the result to appear below the button.</li>
-        <li>Watch the cylinder chart update dynamically!</li>
-      </ul>
-    </div>
   </div>
-
-  <footer>
-    <p>Created by <strong>Anmol</strong> | © 2024</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>

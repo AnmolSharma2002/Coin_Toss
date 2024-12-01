@@ -1,70 +1,131 @@
-/* General body styling */
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s; /* Smooth background color change */
   }
   
-  /* Container styling */
+  /* Container Styling */
   .container {
     margin-top: 50px;
+    padding: 0 10px;
   }
   
-  /* Heading styling */
-  .container h1 {
-    font-size: 36px;
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  /* Paragraphs */
-  p {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  /* Button styling */
+  /* Button Styling */
   button {
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 18px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
   
   button:hover {
     background-color: #0056b3;
   }
   
-  /* Result text styling */
-  #result-text {
+  /* Betting Section Styling */
+  .betting-section {
+    margin: 20px 0;
+  }
+  
+  .betting-section h2 {
     font-size: 24px;
-    font-weight: bold;
+    color: #333;
+  }
+  
+  .betting-section label {
+    margin: 10px;
+    font-size: 18px;
+    display: inline-block;
+  }
+  
+  /* Attractive Radio Button Styling */
+  input[type="radio"] {
+    display: none; /* Hide the default radio button */
+  }
+  
+  input[type="radio"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  input[type="radio"]:checked + label:before {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  input[type="radio"]:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  /* Result Display Styling */
+  #result {
     margin-top: 20px;
   }
   
-  /* Dynamic result colors */
+  #result-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
   .win {
-    color: #28a745; /* Green for Heads */
+    color: #28a745; /* Green for correct bet */
   }
   
   .lose {
-    color: #dc3545; /* Red for Tails */
+    color: #dc3545; /* Red for incorrect bet */
   }
   
-  /* Cylinder chart styling */
+  /* Betting Result */
+  #bet-result {
+    margin-top: 20px;
+  }
+  
+  #bet-status {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Cylinder Chart */
   .cylinder-chart {
-    margin-top: 30px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
   
-  /* The cylinder container */
   .cylinder {
     position: relative;
     width: 100px;
@@ -72,11 +133,9 @@ body {
     border: 3px solid #333;
     border-radius: 50px;
     overflow: hidden;
-    margin: 0 auto;
     background-color: #e0e0e0;
   }
   
-  /* The green and red fills */
   .fill {
     position: absolute;
     width: 100%;
@@ -84,53 +143,92 @@ body {
     transition: height 0.5s ease-in-out;
   }
   
-  
-  
   .tails-fill {
-    background-color: #dc3545; /* Red for Tails */
+    background-color: #dc3545; /* Red */
   }
   
-  /* Chart information text */
+  /* Info Section Below Cylinder */
   .chart-info {
-    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 18px;
   }
   
   .chart-info p {
-    font-size: 18px;
     margin: 5px 0;
   }
   
-  /* Instructions section */
-  .instructions {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Mobile and Tablet Responsiveness */
+  @media (max-width: 768px) {
+    /* Reduce font size for smaller screens */
+    .betting-section h2 {
+      font-size: 20px;
+    }
+  
+    .betting-section label {
+      font-size: 16px;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  
+    #result-text {
+      font-size: 20px;
+    }
+  
+    .cylinder {
+      width: 80px;
+      height: 250px;
+    }
+  
+    /* Info Section Below Cylinder */
+    .chart-info {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .chart-info p {
+      font-size: 16px;
+    }
+  
+    .cylinder-chart {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
   }
   
-  .instructions h2 {
-    font-size: 24px;
-    color: #333;
-  }
+  @media (max-width: 480px) {
+    /* Further reduction for very small screens */
+    .betting-section h2 {
+      font-size: 18px;
+    }
   
-  .instructions ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
-    font-size: 18px;
-  }
+    .betting-section label {
+      font-size: 14px;
+    }
   
-  /* Footer styling */
-  footer {
-    margin-top: 50px;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 14px;
-  }
+    button {
+      padding: 6px 14px;
+      font-size: 14px;
+    }
   
-  footer p {
-    margin: 0;
+    #result-text {
+      font-size: 18px;
+    }
+  
+    .cylinder {
+      width: 60px;
+      height: 200px;
+    }
+  
+    .chart-info p {
+      font-size: 14px;
+    }
+  
+    .cylinder-chart {
+      margin-top: 20px;
+    }
   }
   
