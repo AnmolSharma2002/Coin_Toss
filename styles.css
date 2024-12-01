@@ -1,0 +1,136 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+  }
+  
+  /* Container styling */
+  .container {
+    margin-top: 50px;
+  }
+  
+  /* Heading styling */
+  .container h1 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Result text styling */
+  #result-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Dynamic result colors */
+  .win {
+    color: #28a745; /* Green for Heads */
+  }
+  
+  .lose {
+    color: #dc3545; /* Red for Tails */
+  }
+  
+  /* Cylinder chart styling */
+  .cylinder-chart {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  /* The cylinder container */
+  .cylinder {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #e0e0e0;
+  }
+  
+  /* The green and red fills */
+  .fill {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition: height 0.5s ease-in-out;
+  }
+  
+  
+  
+  .tails-fill {
+    background-color: #dc3545; /* Red for Tails */
+  }
+  
+  /* Chart information text */
+  .chart-info {
+    margin-top: 15px;
+  }
+  
+  .chart-info p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  /* Instructions section */
+  .instructions {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .instructions h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .instructions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  /* Footer styling */
+  footer {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  

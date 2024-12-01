@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Toss Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 Coin Toss Simulator 🎲</h1>
+    <p>Click the button below to toss the coin and see whether it's Heads or Tails!</p>
+
+    <button id="toss-button">Toss the Coin</button>
+
+    <div id="result">
+      <img id="coin-image" src="" alt="Coin Side" style="display: none;">
+      <p id="result-text"></p>
+    </div>
+
+    <div class="cylinder-chart">
+      <div class="cylinder">
+        <div class="fill heads-fill" style="height: 0%;"></div>
+        <div class="fill tails-fill" style="height: 0%;"></div>
+      </div>
+      <div class="chart-info">
+        <p>Total Tosses: <span id="total-tosses">0</span></p>
+        <p>Heads: <span id="heads-count">0</span></p>
+        <p>Tails: <span id="tails-count">0</span></p>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h2>How to Play</h2>
+      <ul>
+        <li>Click the "Toss the Coin" button.</li>
+        <li>Wait for the result to appear below the button.</li>
+        <li>Watch the cylinder chart update dynamically!</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by <strong>Anmol</strong> | © 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
